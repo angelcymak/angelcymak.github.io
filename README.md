@@ -1,1 +1,1 @@
-# Visit My Page [HERE](https://angelcymak.github.io)
+# Visit My Page [Here](https://angelcymak.github.io)
