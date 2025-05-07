@@ -1,4 +1,4 @@
-# League of Legends Match Outcome Prediction Using Logistic Regression in PyTorch
+# Match Outcome Prediction Using Logistic Regression in PyTorch
 
 ### Introduction
 
