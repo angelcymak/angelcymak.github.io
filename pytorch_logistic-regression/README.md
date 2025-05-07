@@ -2,9 +2,9 @@
 
 ### Introduction
 
-This notebook is the final project of the course [Introduction to Neural Networks and PyTorch by IBM](https://www.coursera.org/learn/deep-neural-networks-with-pytorch)
+This analysis is the final project of the course [Introduction to Neural Networks and PyTorch by IBM](https://www.coursera.org/learn/deep-neural-networks-with-pytorch)
 
-League of Legends, a popular multiplayer online battle arena (MOBA) game, generates extensive data from matches. This project builds a logistic regression model aimed at predicting the outcomes of League of Legends matches.  
+League of Legends, a popular multiplayer online battle arena (MOBA) game, generates extensive data from matches. This project builds a logistic regression model that aimed at predicting the outcomes of League of Legends matches.  
 
 Data: [league_of_legends_data_large.csv](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/rk7VDaPjMp1h5VXS-cUyMg/league-of-legends-data-large.csv) 
 
