@@ -27,9 +27,9 @@ Use `StandardScaler()` from sklearn.preprocessing to scale the features.</br>
 5. Convert to PyTorch tensors:
 Use `torch.tensor()` to convert the data to PyTorch tensors.
 
-#### Exercise 1:  
+ 
 
-Write a code to load the dataset, split it into training and testing sets, standardize the features, and convert the data into PyTorch tensors for use in training a PyTorch model. 
+** Write code to load the dataset, split it into training and testing sets, standardize the features, and convert the data into PyTorch tensors for use in training a PyTorch model.**
 
 
 
@@ -86,9 +86,8 @@ Defining the logistic regression model involves specifying the input dimensions,
 - Loss Function: Use `BCELoss()` from torch.nn (Binary Cross-Entropy Loss).</br>
 - Optimizer: Initialize the optimizer using `optim.SGD()` with a learning rate of 0.01</br>
 
-#### Exercise 2:  
 
-Define the logistic regression model using PyTorch, specifying the input dimensions and the forward pass. Initialize the model, loss function, and optimizer.  
+**Define the logistic regression model using PyTorch, specifying the input dimensions and the forward pass. Initialize the model, loss function, and optimizer.**
 
 
 
@@ -155,10 +154,9 @@ The training loop will run for a specified number of epochs. In each epoch, the 
    
 6. Print Accuracy:  
    - Print the training and test accuracies after the evaluation is complete.
+ 
 
-#### Exercise 3:  
-
-Write the code to train the logistic regression model on the dataset. Implement the training loop, making predictions, calculating the loss, performing backpropagation, and updating model parameters. Evaluate the model's accuracy on training and testing sets.  
+**Write the code to train the logistic regression model on the dataset. Implement the training loop, making predictions, calculating the loss, performing backpropagation, and updating model parameters. Evaluate the model's accuracy on training and testing sets.**
 
 
 
@@ -230,9 +228,7 @@ For example, when you initialize the optimizer with optim.SGD(model.parameters()
    - Print the training accuracy and test accuracy  after evaluation.
 
 
-#### Exercise 4:  
-
-Implement optimization techniques like L2 regularization and retrain the model. Evaluate the performance of the optimized model on both training and testing sets.  
+**Implement optimization techniques like L2 regularization and retrain the model. Evaluate the performance of the optimized model on both training and testing sets.**
 
 
 
@@ -299,9 +295,7 @@ AUC stands for Area Under the Curve and is a performance metric used to evaluate
 Classification Report:
 A Classification Report is a summary of various classification metrics, which are useful for evaluating the performance of a classifier on the given dataset.
 
-#### Exercise 5:  
-
-Write code to visualize the model's performance using confusion matrices and ROC curves. Generate classification reports to evaluate precision, recall, and F1-score. Retrain the model with L2 regularization and evaluate the performance.
+**Write code to visualize the model's performance using confusion matrices and ROC curves. Generate classification reports to evaluate precision, recall, and F1-score. Retrain the model with L2 regularization and evaluate the performance.**
 
 
 
@@ -420,9 +414,7 @@ This task demonstrates the techniques to persist a trained model using `torch.sa
    - After loading the model, evaluate it again on the test dataset to make sure it performs similarly to when it was first trained..Now evaluate it on the test data.
    - Use `torch.no_grad()` to ensure that no gradients are computed.
 
-#### Exercise 6:  
-
-Write code to save the trained model and reload it. Ensure the loaded model performs consistently by evaluating it on the test dataset.  
+**Write code to save the trained model and reload it. Ensure the loaded model performs consistently by evaluating it on the test dataset.** 
 
 
 
@@ -467,9 +459,8 @@ By testing different learning rates, you will identify the optimal rate that pro
   - After training with each learning rate, compare the test accuracy for each configuration.
    - Report the learning rate that gives the highest test accuracy
 
-#### Exercise 7:  
 
-Perform hyperparameter tuning to find the best learning rate. Retrain the model for each learning rate and evaluate its performance to identify the optimal rate.  
+**Perform hyperparameter tuning to find the best learning rate. Retrain the model for each learning rate and evaluate its performance to identify the optimal rate.**  
 
 
 
@@ -568,9 +559,9 @@ The code to evaluate feature importance to understand the impact of each feature
 4. Interpreting the Results:
   - Larger absolute weights indicate more influential features. Positive weights suggest a positive correlation with the outcome (likely to predict the positive class), while negative weights suggest the opposite.
 
-#### Exercise 8:  
+ 
 
-Evaluate feature importance by extracting the weights of the linear layer and creating a DataFrame to display the importance of each feature. Visualize the feature importance using a bar plot.  
+**Evaluate feature importance by extracting the weights of the linear layer and creating a DataFrame to display the importance of each feature. Visualize the feature importance using a bar plot.**
 
 
 
