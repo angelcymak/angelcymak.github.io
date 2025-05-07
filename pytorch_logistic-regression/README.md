@@ -15,16 +15,17 @@ Data: [league_of_legends_data_large.csv](https://cf-courses-data.s3.us.cloud-obj
 Loading and preprocessing the dataset involves reading the data, splitting it into training and testing sets, and standardizing the features. You will utilize `pandas` for data manipulation, `train_test_split` from `sklearn` for data splitting, and `StandardScaler` for feature scaling.  
 
 1 .Load the dataset:
-* Use `pd.read_csv()` to load the dataset into a pandas DataFrame.
+  - Use `pd.read_csv()` to load the dataset into a pandas DataFrame.
+
 2. Split data into features and target: Separate win (target) and the remaining columns (features).
-* X = data.drop('win', axis=1)
-* y = data['win']
+  - X = data.drop('win', axis=1)
+  - y = data['win']
 3 .Split the Data into Training and Testing Sets:
-* Use `train_test_split()` from `sklearn.model_selection` to divide the data. Set `test_size`=0.2 to allocate 20% for testing and 80% for training, and use `random_state`=42 to ensure reproducibility of the split.
+  - Use `train_test_split()` from `sklearn.model_selection` to divide the data. Set `test_size`=0.2 to allocate 20% for testing and 80% for training, and use `random_state`=42 to ensure reproducibility of the split.
 4. Standardize the features:
-* Use `StandardScaler()` from sklearn.preprocessing to scale the features.
+  - Use `StandardScaler()` from sklearn.preprocessing to scale the features.
 5. Convert to PyTorch tensors:
-* Use `torch.tensor()` to convert the data to PyTorch tensors.
+  - Use `torch.tensor()` to convert the data to PyTorch tensors.
 
  
 
@@ -75,15 +76,15 @@ y_test = torch.tensor(y_test.values, dtype=torch.float32).unsqueeze(1)
 Defining the logistic regression model involves specifying the input dimensions, the forward pass using the sigmoid activation function, and initializing the model, loss function, and optimizer.  
 
 1 .Define the Logistic Regression Model:
-* Create a class LogisticRegressionModel that inherits from torch.nn.Module.
-* In the `__init__()` method, define a linear layer (nn.Linear) to implement the logistic regression model.
-* The `forward()` method should apply the sigmoid activation function to the output of the linear layer.
+  - Create a class LogisticRegressionModel that inherits from torch.nn.Module.
+  - In the `__init__()` method, define a linear layer (nn.Linear) to implement the logistic regression model.
+  - The `forward()` method should apply the sigmoid activation function to the output of the linear layer.
 
 2.Initialize the Model, Loss Function, and Optimizer:
-* Set input_dim: Use `X_train.shape[1]` to get the number of features from the training data (X_train).
-* Initialize the model: Create an instance of the LogisticRegressionModel class  (e.g., `model = LogisticRegressionModel()`)while passing input_dim as a parameter
-* Loss Function: Use `BCELoss()` from torch.nn (Binary Cross-Entropy Loss).
-* Optimizer: Initialize the optimizer using `optim.SGD()` with a learning rate of 0.01
+  - Set input_dim: Use `X_train.shape[1]` to get the number of features from the training data (X_train).
+  - Initialize the model: Create an instance of the LogisticRegressionModel class  (e.g., `model = LogisticRegressionModel()`)while passing input_dim as a parameter
+  - Loss Function: Use `BCELoss()` from torch.nn (Binary Cross-Entropy Loss).
+  - Optimizer: Initialize the optimizer using `optim.SGD()` with a learning rate of 0.01
 
 
 **Define the logistic regression model using PyTorch, specifying the input dimensions and the forward pass. Initialize the model, loss function, and optimizer.**
