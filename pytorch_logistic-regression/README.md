@@ -14,7 +14,7 @@ Data: [league_of_legends_data_large.csv](https://cf-courses-data.s3.us.cloud-obj
 
 Loading and preprocessing the dataset involves reading the data, splitting it into training and testing sets, and standardizing the features. You will utilize `pandas` for data manipulation, `train_test_split` from `sklearn` for data splitting, and `StandardScaler` for feature scaling.  
 
-1 .Load the dataset:
+1. Load the dataset:
   - Use `pd.read_csv()` to load the dataset into a pandas DataFrame.
 
 2. Split data into features and target: Separate win (target) and the remaining columns (features).
@@ -28,8 +28,8 @@ Loading and preprocessing the dataset involves reading the data, splitting it in
   - Use `torch.tensor()` to convert the data to PyTorch tensors.
 
  
-
-** Write code to load the dataset, split it into training and testing sets, standardize the features, and convert the data into PyTorch tensors for use in training a PyTorch model.**
+#### Task 1: Implementation
+Write code to load the dataset, split it into training and testing sets, standardize the features, and convert the data into PyTorch tensors for use in training a PyTorch model.
 
 
 
@@ -86,8 +86,8 @@ Defining the logistic regression model involves specifying the input dimensions,
   - Loss Function: Use `BCELoss()` from torch.nn (Binary Cross-Entropy Loss).
   - Optimizer: Initialize the optimizer using `optim.SGD()` with a learning rate of 0.01
 
-
-**Define the logistic regression model using PyTorch, specifying the input dimensions and the forward pass. Initialize the model, loss function, and optimizer.**
+#### Task 2: Implementation
+Define the logistic regression model using PyTorch, specifying the input dimensions and the forward pass. Initialize the model, loss function, and optimizer.
 
 
 
@@ -130,7 +130,6 @@ The training loop will run for a specified number of epochs. In each epoch, the 
 
 1. Set Number of Epochs:  
    - Define the number of epochs for training to 1000.
-
 2. Training Loop:  
    For each epoch:
    - Set the model to training mode using `model.train()`.
@@ -155,8 +154,8 @@ The training loop will run for a specified number of epochs. In each epoch, the 
 6. Print Accuracy:  
    - Print the training and test accuracies after the evaluation is complete.
  
-
-**Write the code to train the logistic regression model on the dataset. Implement the training loop, making predictions, calculating the loss, performing backpropagation, and updating model parameters. Evaluate the model's accuracy on training and testing sets.**
+#### Task 3: Implementation
+Write the code to train the logistic regression model on the dataset. Implement the training loop, making predictions, calculating the loss, performing backpropagation, and updating model parameters. Evaluate the model's accuracy on training and testing sets.
 
 
 
@@ -227,8 +226,8 @@ For example, when you initialize the optimizer with optim.SGD(model.parameters()
    - Use a threshold of 0.5 to determine whether the model's predictions are class 0 or class 1.
    - Print the training accuracy and test accuracy  after evaluation.
 
-
-**Implement optimization techniques like L2 regularization and retrain the model. Evaluate the performance of the optimized model on both training and testing sets.**
+#### Task 4: Implementation
+Implement optimization techniques like L2 regularization and retrain the model. Evaluate the performance of the optimized model on both training and testing sets.
 
 
 
@@ -279,7 +278,7 @@ Visualization tools like confusion matrices and ROC curves provide insights into
 
 Confusion Matrix : A Confusion Matrix is a fundamental tool used in classification problems to evaluate the performance of a model. It provides a matrix showing the number of correct and incorrect predictions made by the model, categorized by the actual and predicted classes.
 Where 
--  True Positive (TP): Correctly predicted positive class (class 1).
+- True Positive (TP): Correctly predicted positive class (class 1).
 - True Negative (TN): Correctly predicted negative class (class 0).
 - False Positive (FP): Incorrectly predicted as positive (class 1), but the actual class is negative (class 0). This is also called a Type I error.
 - False Negative (FN): Incorrectly predicted as negative (class 0), but the actual class is positive (class 1). This is also called a Type II error. 
@@ -295,7 +294,8 @@ AUC stands for Area Under the Curve and is a performance metric used to evaluate
 Classification Report:
 A Classification Report is a summary of various classification metrics, which are useful for evaluating the performance of a classifier on the given dataset.
 
-**Write code to visualize the model's performance using confusion matrices and ROC curves. Generate classification reports to evaluate precision, recall, and F1-score. Retrain the model with L2 regularization and evaluate the performance.**
+#### Task 5: Implementation
+Write code to visualize the model's performance using confusion matrices and ROC curves. Generate classification reports to evaluate precision, recall, and F1-score. Retrain the model with L2 regularization and evaluate the performance.
 
 
 
@@ -403,18 +403,19 @@ print (classification_report(y_test, test_label))
 This task demonstrates the techniques to persist a trained model using `torch.save` and reload it using `torch.load`. Evaluating the loaded model ensures that it retains its performance, making it practical for deployment in real-world applications.  
 
 1. Saving the Model:
-- Save the model's learned weights and biases using torch.save().( e.g. , torch.save(model.state_dict(), 'your_model_name.pth'))
-- Saving only the state dictionary (model parameters) is preferred because it’s more flexible and efficient than saving the entire model object.
+  - Save the model's learned weights and biases using torch.save().( e.g. , torch.save(model.state_dict(), 'your_model_name.pth'))
+  - Saving only the state dictionary (model parameters) is preferred because it’s more flexible and efficient than saving the entire model object.
 
 2. Loading the Model:
-- Create a new model instance (e.g., `model = LogisticRegressionModel()`) and load the saved parameters. ( e.g. , `model.load_state_dict(torch.load('your_model_name.pth'))`)`.
+  - Create a new model instance (e.g., `model = LogisticRegressionModel()`) and load the saved parameters. ( e.g. , `model.load_state_dict(torch.load('your_model_name.pth'))`).
 
 3. Evaluating the Loaded Model:
-   - After loading, set the model to evaluation mode by calling `model.eval()
+   - After loading, set the model to evaluation mode by calling `model.eval()`
    - After loading the model, evaluate it again on the test dataset to make sure it performs similarly to when it was first trained..Now evaluate it on the test data.
    - Use `torch.no_grad()` to ensure that no gradients are computed.
 
-**Write code to save the trained model and reload it. Ensure the loaded model performs consistently by evaluating it on the test dataset.** 
+#### Task 6: Implementation
+Write code to save the trained model and reload it. Ensure the loaded model performs consistently by evaluating it on the test dataset. 
 
 
 
@@ -445,11 +446,11 @@ print("Test accuracy : ", (test_label == y_test).float().mean())
 
 By testing different learning rates, you will identify the optimal rate that provides the best test accuracy. This fine-tuning is crucial for enhancing model performance . 
 1. Define Learning Rates:
-   - Choose these learning rates to test ,[0.01, 0.05, 0.1]
+  - Choose these learning rates to test ,[0.01, 0.05, 0.1]
 
 2. Reinitialize the Model for Each Learning Rate:
   - For each learning rate, you’ll need to reinitialize the model and optimizer e.g.(`torch.optim.SGD(model.parameters(), lr=lr)`).
-   - Each new learning rate requires reinitializing the model since the optimizer and its parameters are linked to the learning rate.
+  - Each new learning rate requires reinitializing the model since the optimizer and its parameters are linked to the learning rate.
 
 3. Train the Model for Each Learning Rate:
   - Train the model for a fixed number of epochs (e.g., 50 or 100 epochs) for each learning rate, and compute the accuracy on the test set.
@@ -460,7 +461,8 @@ By testing different learning rates, you will identify the optimal rate that pro
    - Report the learning rate that gives the highest test accuracy
 
 
-**Perform hyperparameter tuning to find the best learning rate. Retrain the model for each learning rate and evaluate its performance to identify the optimal rate.**  
+#### Task 7: Implementation
+Perform hyperparameter tuning to find the best learning rate. Retrain the model for each learning rate and evaluate its performance to identify the optimal rate.
 
 
 
@@ -544,13 +546,13 @@ print(f'{best_lr=}, {best_accuracy=}')
 
 The code to evaluate feature importance to understand the impact of each feature on the prediction.
 
- 1.Extracting Model Weights:
+1. Extracting Model Weights:
   - The weights of the logistic regression model represent the importance of each feature in making predictions. These weights are stored in the model's linear layer (`model.linear.weight`).
- - You can extract the weights using `model.linear.weight.data.numpy()` and flatten the resulting tensor to get a 1D array of feature importances.
+  - You can extract the weights using `model.linear.weight.data.numpy()` and flatten the resulting tensor to get a 1D array of feature importances.
 
-2.Creating a DataFrame:
- - Create a pandas DataFrame with two columns: one for the feature names and the other for their corresponding importance values (i.e., the learned weights).
- - Ensure the features are aligned with their names in your dataset (e.g., `X_train.columns).
+2. Creating a DataFrame:
+  - Create a pandas DataFrame with two columns: one for the feature names and the other for their corresponding importance values (i.e., the learned weights).
+  - Ensure the features are aligned with their names in your dataset (e.g., `X_train.columns`).
 
 3. Sorting and Plotting Feature Importance:
   - Sort the features based on the absolute value of their importance (weights) to identify the most impactful features.
@@ -560,8 +562,8 @@ The code to evaluate feature importance to understand the impact of each feature
   - Larger absolute weights indicate more influential features. Positive weights suggest a positive correlation with the outcome (likely to predict the positive class), while negative weights suggest the opposite.
 
  
-
-**Evaluate feature importance by extracting the weights of the linear layer and creating a DataFrame to display the importance of each feature. Visualize the feature importance using a bar plot.**
+#### Task 8: Implementation
+Evaluate feature importance by extracting the weights of the linear layer and creating a DataFrame to display the importance of each feature. Visualize the feature importance using a bar plot.
 
 
 
