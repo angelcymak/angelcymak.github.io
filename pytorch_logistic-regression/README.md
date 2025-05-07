@@ -1,4 +1,4 @@
-# Final Project: League of Legends Match Predictor 
+# League of Legends Match Outcome Prediction Using Logistic Regression in PyTorch
 
 
 ### Introduction
