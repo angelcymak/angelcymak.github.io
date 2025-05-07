@@ -1,6 +1,5 @@
 # League of Legends Match Outcome Prediction Using Logistic Regression in PyTorch
 
-
 ### Introduction
 
 This notebook is the final project of the course [Introduction to Neural Networks and PyTorch by IBM](https://www.coursera.org/learn/deep-neural-networks-with-pytorch)
